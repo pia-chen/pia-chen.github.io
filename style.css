@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6; 
+  background-color: #f6f4d2; 
+  color: #05668d;            
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 40px; 
+}
+
+header {
+  overflow: hidden;
+  border-bottom: 2px solid #05668d; 
+  padding-bottom: 15px;
+}
+
+header h1 {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: #05668d;
+}
+
+nav {
+  float: right;
+  margin-top: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #05668d;
+  margin-left: 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #00a896; 
+}
+
+.about-section {
+  overflow: hidden;
+  padding: 40px 0;
+  border-bottom: 2px solid #05668d;
+}
+
+.profile-photo {
+  float: left;
+  width: 210px;
+}
+
+.profile-photo img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #05668d;
+}
+
+.profile-info {
+  margin-left: 210px;
+}
+
+.slogan {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #00a896;
+}
+
+.school {
+  font-size: 16px;
+  color: #028090; 
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.box {
+  border: 1.5px solid #05668d;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+.content {
+  overflow: hidden;
+  padding: 30px 0;
+  border-bottom: 3px solid #05668d; 
+}
+
+aside {
+  float: left;
+  width: 30%; 
+  padding-right: 30px;
+}
+
+aside h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #05668d;
+}
+
+.skill-item {
+  margin-bottom: 15px;
+}
+
+.skill-item span {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.bar {
+  width: 100%;
+  height: 14px;
+  background-color: #d9ecee;
+  border-radius: 7px;
+  overflow: hidden;
+}
+/* CSS動態特效，進度條載入時由左向右延伸並變顏色 - 使用 animation 與 @keyframes */
+.bar-fill {
+  height: 100%;
+  animation: yellow-to-orange 3s ease-out forwards;
+}
+
+@keyframes yellow-to-orange {
+  from {
+    width: 0%;
+    background-color: #02c39a; 
+  }
+  to {
+    background-color: #028090;
+  }
+}
+
+.bar-fill.java { width: 80%; }
+.bar-fill.html-css { width: 75%; } 
+.bar-fill.python { width: 70%; }
+.bar-fill.otherone { width: 85%; }    
+.bar-fill.othertwo { width: 90%; }      
+
+.exp-section {
+  float: right;
+  width: 70%;
+  border-left: 2.5px dashed #05668d;
+  padding: 30px;
+}
+
+.exp-section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #05668d;
+}
+
+.exp-grid {
+  width: 100%;
+}
+
+/* CSS動態特效，滑鼠懸停時經歷卡片向上浮起並顯示陰影 - 使用 transition、transform 與 box-shadow */
+.exp-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  height: 620px;
+  margin-right: 1.5%;
+  margin-bottom: 15px;
+  background-color: #ffffff;     
+  border: 1.5px solid #05668d;   
+  border-radius: 6px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exp-carda {
+  display: block;
+  width: 98%;
+  margin-bottom: 15px;
+  background-color: #ffffff;     
+  border: 1.5px solid #05668d;   
+  border-radius: 6px;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exp-card:hover,
+.exp-carda:hover {
+  transform: translateY(-4px);
+  border-color: #05668d;         
+  box-shadow: 0 6px 14px #b8d8e0;
+}
+
+.exp-card h3,
+.exp-carda h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #05668d;
+}
+
+.exp-img {
+  display: block;
+  width: 220px;             
+  height: 300px;             
+  max-width: 100%;
+  object-fit: cover;
+  margin: 0 auto 10px auto; 
+  padding: 6px;                  
+  background-color: #f6f4d2;     
+  border: 2px solid #05668d;     
+  border-radius: 14px;           
+}
+
+.exp-imga {
+  display: block;
+  width: 400px;             
+  height: 260px;             
+  max-width: 100%;
+  object-fit: cover;
+  margin: 0 auto 10px auto; 
+  padding: 6px;                  
+  background-color: #f6f4d2;     
+  border: 2px solid #05668d;     
+  border-radius: 14px;        
+}
+
+.exp-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #02c39a; 
+  color: #ffffff;           
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+.exp-link:hover {
+  background-color: #028090; 
+  color: #f0f3bd;
+}
+
+.exp-card p,
+.exp-carda p {
+  font-size: 15px;
+  color: #028090;
+}
+
+footer {
+  padding: 25px 0;
+}
+
+footer a {
+  display: inline-block;
+  margin-right: 30px;
+  text-decoration: none;
+  color: #05668d;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #00a896;
+}
